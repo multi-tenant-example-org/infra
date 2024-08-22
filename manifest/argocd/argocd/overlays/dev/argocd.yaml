@@ -6,7 +6,7 @@ metadata:
 spec:
   destination:
     server: https://kubernetes.default.svc
-  project: argocd
+  project: default
   source:
     path: manifest/argocd/argocd/overlays/dev
     repoURL: https://github.com/multi-tenant-example-org/infra.git
