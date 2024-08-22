@@ -3,3 +3,4 @@ resources:
 - app-project-tenant-2.yaml
 - app-project-tenant-3.yaml
 - argocd-cm.yaml
+- argocd.yaml
