@@ -1,0 +1,8 @@
+resources:
+- ../../base
+- argocd-rbac-cm.yaml
+
+patches:
+- path: app-project-tenant-1.yaml
+- path: app-project-tenant-2.yaml
+- path: app-project-tenant-3.yaml

@@ -1,0 +1,5 @@
+resources:
+- app-project-tenant-1.yaml
+- app-project-tenant-2.yaml
+- app-project-tenant-3.yaml
+- argocd-cm.yaml

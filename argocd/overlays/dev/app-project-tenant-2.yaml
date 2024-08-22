@@ -1,0 +1,33 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: tenant-2
+  namespace: argocd
+spec:
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'
+  destinations:
+  - namespace: '*'
+    server: '*'
+  roles:
+  - name: guest
+    description: "guest role"
+    policies:
+    - p, proj:tenant-2:guest, applications, get, */*, allow
+  - name: developer
+    description: "developer role"
+    policies:
+    - p, proj:tenant-2:developer, applications, create, tenant-2/*, allow
+    - p, proj:tenant-2:developer, applications, get, tenant-2/*, allow
+    - p, proj:tenant-2:developer, applications, update, tenant-2/*, allow
+    - p, proj:tenant-2:developer, applications, delete, tenant-2/*, allow
+    - p, proj:tenant-2:developer, applications, sync, tenant-2/*, allow
+  - name: operator
+    description: "operator role"
+    policies:
+    - p, proj:tenant-2:operator, applications, create, */*, allow
+    - p, proj:tenant-2:operator, applications, get, */*, allow
+    - p, proj:tenant-2:operator, applications, update, */*, allow
+    - p, proj:tenant-2:operator, applications, delete, */*, allow
+    - p, proj:tenant-2:operator, applications, sync, */*, allow

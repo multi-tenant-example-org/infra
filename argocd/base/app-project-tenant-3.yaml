@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: tenant-3
+  namespace: argocd
+spec:
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'
+  destinations:
+  - namespace: '*'
+    server: '*'
+  sourceRepos:
+  - https://github.com/multi-tenant-example-org/tenant-3
+  roles:
+  - name: guest
+    description: "guest role"
+  - name: developer
+    description: "developer role"
+  - name: operator
+    description: "operator role"

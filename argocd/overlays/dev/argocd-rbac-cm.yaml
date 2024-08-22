@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: argocd-rbac-cm
+  namespace: argocd
+data:
+  #policy.default: role:readonly
+  policy.csv: |
+    g, guest, proj:tenant-1:guest
+    g, guest, proj:tenant-2:guest
+    g, guest, proj:tenant-3:guest
+
+    g, kin, proj:tenant-1:developer
+    g, gin, proj:tenant-2:developer
+    g, dou, proj:tenant-3:developer
+
+    g, root, proj:tenant-1:operator
+    g, root, proj:tenant-2:operator
+    g, root, proj:tenant-3:operator
