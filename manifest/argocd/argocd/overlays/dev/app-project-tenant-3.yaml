@@ -8,7 +8,9 @@ spec:
   - group: '*'
     kind: '*'
   destinations:
-  - namespace: '*'
+  - namespace: 'tenant-3'
+    server: '*'
+  - namespace: 'tenant-3-*'
     server: '*'
   roles:
   - name: guest
