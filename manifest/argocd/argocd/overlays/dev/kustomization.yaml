@@ -9,3 +9,6 @@ patches:
 - path: app-project-tenant-2.yaml
 - path: app-project-tenant-3.yaml
 - path: argocd.yaml
+- path: tenant-1.yaml
+- path: tenant-2.yaml
+- path: tenant-3.yaml
