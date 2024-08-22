@@ -1,0 +1,13 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argocd
+  namespace: argocd
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+  project: argocd
+  source:
+    path: manifest/argocd/argocd/overlays/dev
+    repoURL: https://github.com/multi-tenant-example-org/infra.git
+    targetRevision: HEAD
