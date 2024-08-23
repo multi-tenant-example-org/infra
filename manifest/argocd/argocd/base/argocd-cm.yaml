@@ -12,3 +12,15 @@ data:
   accounts.kin: login # tenant-1
   accounts.gin: login # tenant-2
   accounts.dou: login # tenant-3
+  url: https://35.200.83.87
+
+  dex.config: |
+    connectors:
+      - type: github
+        id: github
+        name: GitHub
+        config:
+          clientID: Ov23liW6r0OCJ8BO3nnp
+          clientSecret: 9ca915dffb5351592d65b875b555f88a0b281412
+          orgs:
+          - name: multi-tenant-example-org
